@@ -4,9 +4,12 @@
   "description": "Proyek Purwa untuk Hamda Hikmah Software",
   "author": "Hendra Dwi Saputra <dahisoft@outlook.com>",
   "license": "MIT",
-  "main": "server.js",
+  "main": "app.js",
   "repository": {},
   "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "tsc -p ./src/tsconfig.json",
+    "start": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -34,6 +37,7 @@
     "@types/lodash": "^4.14.74",
     "@types/passport": "^0.3.4",
     "@types/passport-jwt": "^2.0.23",
+    "rimraf": "^2.6.1",
     "typescript": "^2.4.2"
   }
 }
